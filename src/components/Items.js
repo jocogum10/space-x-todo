@@ -4,6 +4,13 @@ function Items(props) {
 
   const flight_year = new Date(props.data.date_local);
   let year = flight_year.getFullYear();
+
+  let image = 'https://via.placeholder.com/150'
+
+  if (props.data.links.flickr.original[0]) {
+    image = props.data.links.flickr.original[0]
+  }
+
   return (
     <div className="relative block overflow-hidden rounded-lg border border-gray-100 p-8">
 
@@ -11,7 +18,8 @@ function Items(props) {
         <div className="ml-3 hidden flex-shrink-0 sm:block">
           <img
             alt="Image"
-            src="https://via.placeholder.com/150"
+            src={image}
+            // src="https://via.placeholder.com/150"
             className="h-16 w-16 rounded-lg object-cover shadow-sm"
           />
         </div>
