@@ -19,7 +19,6 @@ function Items(props) {
           <img
             alt="Image"
             src={image}
-            // src="https://via.placeholder.com/150"
             className="h-16 w-16 rounded-lg object-cover shadow-sm"
           />
         </div>

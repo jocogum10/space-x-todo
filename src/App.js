@@ -25,7 +25,7 @@ function App() {
   }, []);
 
   return (
-    <main className='bg-gray-200 flex flex-col justify-start items-center h-screen overflow-auto'>
+    <main className='flex flex-col justify-start items-center'>
       <SearchBar />
       
       {loading? (<Loading />) : (<List data={data}/>)}
