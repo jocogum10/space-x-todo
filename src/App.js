@@ -8,6 +8,7 @@ function App() {
 
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(false);
 
   useEffect(() => {
     axios.get('https://api.spacexdata.com/v4/launches/')
@@ -15,10 +16,10 @@ function App() {
     // handle success
     setData(response.data)
     setLoading(false)
-    console.log(response.data);
   })
   .catch(function (error) {
     // handle error
+    setError(true)
     console.log(error);
   });
   }, []);
@@ -28,6 +29,8 @@ function App() {
       <SearchBar />
       
       {loading? (<Loading />) : (<List data={data}/>)}
+      {error && <div>Error occured</div>}
+      
 
       
       
