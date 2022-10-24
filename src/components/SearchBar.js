@@ -3,7 +3,7 @@ import React from 'react'
 function SearchBar() {
   return (
 
-    <section className="w-5/6 py-8">
+    <section className="w-4/6 py-8">
       <div>
         <label htmlFor="search" className="sr-only">Searchbar</label>
 
